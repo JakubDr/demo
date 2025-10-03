@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo JS</title>
+</head>
+<body>
+    <h1>JavaScript - ukazkova stranka</h1>
+
+    <h2 id="nadpis" onmouseover="this.style.color = randomColour(); this.style.background = randomColour();">Kouzelny text</h2> 
+
+    <p id="kouzelnyText" >Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, libero voluptatibus nisi fugit modi ab possimus pariatur omnis rem minus autem laborum unde explicabo. Quidem deserunt ipsam quaerat suscipit neque?</p>
+
+    <h2>Magicky obrazek</h2>
+    <figure>
+        <img id="fotka" src="portret.jpg" alt="portret" width="200">
+        <figcaption>zvetsujici se fotka</figcaption>
+    </figure>
+
+    <h2>Superkalkulacka</h2>
+
+    <div>
+        <p>Zadej desitkove cislo: <input type="number" value="0" min="0" max="1000" id="dec"> </p>
+        <p><button id="convert">Preved</button></p>
+        <p id="result">Vysledek: </p>
+    </div>
+    
+    <script src="./js/kouzla.js"></script>
+</body>
+</html>
