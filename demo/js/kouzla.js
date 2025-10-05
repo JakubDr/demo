@@ -15,21 +15,25 @@ function randomColour() {
             let b = Math.round(Math.random() * 255);
             return `rgb(${r}, ${g}, ${b})`;
         }
+        //po najeti mysi se obrazek zvetsi 2x
         fotka.addEventListener("mouseover", function() {
             fotka.width *= 2
         }); 
+        //po odjeti mysi se obrazek zmensi 2x
         fotka.addEventListener("mouseout", function() {
             fotka.width /= 2
         });
+        //vyzve uzivatele k zadani textu, zmeni barvu a velikost textu
         kouzelnyText.addEventListener("click", function() {
     let txt = prompt('Zadej text');
     kouzelnyText.innerHTML = txt ? txt : 'Zadej text:';
     kouzelnyText.style.color = randomColour();
+    //nahodna velikost textu od 10 do 50 px
     let x = Math.round(Math.random() * 40 + 10);
     kouzelnyText.style.fontSize = x + "px";
     kouzelnyText.innerHTML += x;
 });
-
+//cislo, ketre uzivatel zada do pole, se prevede do BIN, OCT a HEX soustavy
 convert.addEventListener("click", function() {
     let decNumber = parseInt(dec.value);
     console.log(decNumber.toString(16));
