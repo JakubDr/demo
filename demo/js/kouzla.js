@@ -13,7 +13,7 @@ function randomColour() {
             let r = Math.round(Math.random() * 255); 
             let g = Math.round(Math.random() * 255);
             let b = Math.round(Math.random() * 255);
-            return `rgb(${r}, ${g}, ${b})`;
+            return `rgb(${r}, ${g}, ${b})`; //vrati barvu
         }
         //po najeti mysi se obrazek zvetsi 2x
         fotka.addEventListener("mouseover", function() {
@@ -25,9 +25,9 @@ function randomColour() {
         });
         //vyzve uzivatele k zadani textu, zmeni barvu a velikost textu
         kouzelnyText.addEventListener("click", function() {
-    let txt = prompt('Zadej text');
+    let txt = prompt('Zadej text');  //vyzve uzivatele k zadani textu
     kouzelnyText.innerHTML = txt ? txt : 'Zadej text:';
-    kouzelnyText.style.color = randomColour();
+    kouzelnyText.style.color = randomColour(); //zmeni barvu textu
     //nahodna velikost textu od 10 do 50 px
     let x = Math.round(Math.random() * 40 + 10);
     kouzelnyText.style.fontSize = x + "px";
@@ -39,5 +39,5 @@ convert.addEventListener("click", function() {
     console.log(decNumber.toString(16));
     result.innerHTML = ` <b>BIN: ${decNumber.toString(2)} <br>
                         <b> OCT: ${decNumber.toString(8)} <br>
-                        <b> HEX: ${decNumber.toString(16)} <br>`;
+                        <b> HEX: ${decNumber.toString(16)} <br>`; //vypise vysledky
 });
